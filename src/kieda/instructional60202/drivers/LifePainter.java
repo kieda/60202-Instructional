@@ -92,16 +92,16 @@ public class LifePainter implements Paintable{
         g.setColor(background);
         g.fillRect(0,0,w*(cellwidth+spacing)+spacing,h*(cellwidth+spacing)+spacing);
     }
-    final float max = (w/2 + h/2)*1.5f;
+    final float max = (w/2 + h/2)*1.3f;
     final float maxw = 500*(w+h);
     public Color calculateFor(int x, int y){
         int dist = Math.abs(w/2-x) + Math.abs(h/2-y);
         
-        return new Color(Color.HSBtoRGB(0, .2f, .5f*(1-((float)dist/max))));//Color.DARK_GRAY;
+        return new Color(Color.HSBtoRGB(0, ((float)Math.random()*.2f + .80f)*.2f, (1-((float)dist/max))));//Color.DARK_GRAY;
     }
     public Color blankFor(int x, int y){
         int dist = x+y;
-        return new Color(Color.HSBtoRGB((176f)/255f, .15f, (1-((float)dist/maxw))));//Color.DARK_GRAY;
+        return new Color(Color.HSBtoRGB((176f)/255f*((float)Math.random()*.1f + .9f), .15f, (1-((float)dist/maxw))));//Color.DARK_GRAY;
     }
     public static void main(String[] args) {
         System.out.print("[");
