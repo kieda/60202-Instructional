@@ -109,12 +109,12 @@ public class LifePainter implements Paintable{
             System.out.print("[");
             int i = 0;
         for(boolean n : b){
-            if(i==(b.length-1))
-            System.out.print(n?1:0);
-            else System.out.print(n?1:0+", ");
+            if(i==0)
+                System.out.print(n?1:0);
+            else System.out.print(", "+(n?1:0));
             i++;
         }
-            System.out.print("], ");
+            System.out.print("],\n");
         }
     }
 }
