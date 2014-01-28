@@ -1,21 +1,15 @@
 package kieda.instructional60202.drivers;
-import java.awt.BasicStroke;
+import kieda.instructional60202.cells.CellRule;
+import kieda.instructional60202.gfx.LifePainter;
 import java.awt.Color;
-import static java.awt.Color.*;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
-import java.awt.RenderingHints;
-import java.awt.Shape;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.geom.AffineTransform;
-import java.awt.image.BufferedImage;
 import kieda.graphics.Paintable;
-import kieda.graphics.lib.Shapes;
-import kieda.instructional60202.input.ValInput;
 import kieda.testingframe.KFrame;
-import kieda.util.ScreenD;
 
+//543 lines
 public class Main {
     
     /**

@@ -1,4 +1,4 @@
-package kieda.instructional60202.drivers;
+package kieda.instructional60202.gfx;
 
 import java.awt.Color;
 import java.awt.Dimension;

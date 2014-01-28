@@ -1,10 +1,11 @@
-package kieda.instructional60202.drivers;
+package kieda.instructional60202.gfx;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Stroke;
 import kieda.graphics.Paintable;
+import kieda.instructional60202.cells.CellRule;
 
 /**
  * @author zkieda
@@ -40,7 +41,7 @@ public class LifePainter implements Paintable{
         {F, F, F, F, F, F, F, F, F, F, F, F, F, F, T, T, F, F, F, F, F, F, F, F, F, F, F, F, F, F},
         {F, F, F, F, F, F, F, F, F, F, F, F, F, T, F, F, T, F, F, F, F, F, F, F, F, F, F, F, F, F},
     };
-    int w = 30, h = 25;
+    final int w = 30, h = 25;
     
     
     final int spacing = 5;
@@ -87,7 +88,8 @@ public class LifePainter implements Paintable{
         ypos+=cellwidth+spacing;
         }
     }
-    int width = w*(cellwidth+spacing)+spacing, height = h*(cellwidth+spacing)+spacing;
+    public final int width = w*(cellwidth+spacing)+spacing, 
+                    height = h*(cellwidth+spacing)+spacing;
     public void paintBg(Graphics2D g){
         g.setColor(background);
         g.fillRect(0,0,w*(cellwidth+spacing)+spacing,h*(cellwidth+spacing)+spacing);
